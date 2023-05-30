@@ -1,1 +1,218 @@
 @import "./main";
+.health_first {
+    position: relative;
+    // height: 80vh;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        // background: #f6ffff;
+        width: 50vw;
+        height: 100%;
+        border-right: 5px solid $teal;
+        z-index: -1;
+        background: url("/img/health/bg_health_banner.png") #f6ffff;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .health_first_main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        .health_first_left {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 2rem;
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 500;
+                position: relative;
+                display: inline-block;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 55%;
+                    height: 0.1px;
+                    width: 76px;
+                    background: $text-color-dark;
+                    left: 105%;
+                }
+            }
+            h2 {
+                font-size: 1.6rem;
+                color: $teal;
+                margin: 0.2rem 0 1rem;
+            }
+            ul.banner_list {
+                list-style: none;
+                margin-top: 1rem;
+                li {
+                    font-size: 1rem;
+                    margin-top: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    .badge_icon {
+                        color: #29b3ff;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            ul.banner_bottom {
+                list-style: none;
+                margin: 2rem 0 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 1rem;
+                li {
+                    font-size: 1rem;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        width: 1px;
+                        height: 100%;
+                        background: $orange;
+                        position: absolute;
+                        top: 0;
+                        right: -33%;
+                        transform: rotate(15deg);
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    span {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.health_step_one {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .subhead {
+        font-size: 1.2rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 110%;
+            left: 5px;
+            width: 60%;
+            height: 0.3px;
+            background: $orange;
+        }
+        span {
+            color: $orange;
+        }
+    }
+    .process_main {
+        position: relative;
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        align-items: center;
+        .process_step {
+            border: 1px solid $border-color;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $border-color;
+            position: relative;
+            z-index: 1;
+            background: #fff;
+            &.process_step_active {
+                background: $orange;
+                border: 1px solid $orange;
+                color: #fff;
+            }
+            &:first-child {
+                &::after {
+                    display: none;
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -32px;
+                transform: translate(-50%, -50%);
+                width: 4rem;
+                height: 1px;
+                background: $border-color;
+                z-index: -1;
+            }
+        }
+    }
+    .health_step_one_form {
+        .health_step_one_gender {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 1rem;
+            .health_step_one_gender_input {
+                cursor: pointer;
+                input[type='radio'] {
+                    position: absolute;
+                    opacity: 0;
+                }
+                .health_step_one_gender_input_content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
+                    border: 1px solid $border-color;
+                    border-radius: 5px;
+                    color: $text-color-secondary;
+                    svg {
+                        font-size: 1.4rem;
+                        color: $text-color-secondary;
+                    }
+                }
+                input[type="radio"]:checked + .health_step_one_gender_input_content {
+                    box-shadow: 0px 3px 6px #27ACB04D;
+                    border: 1px solid $teal;
+                    color: $teal;
+                    background: $bg-teal;
+                    svg {
+                        color: $teal;
+                    }
+                }
+            }
+        }
+        form {
+            width: 90%;
+            padding-top: 2rem;
+            .health_step_one_label {
+                margin-top: 2rem;
+            }
+            .btn_div {
+                text-align: center;
+                margin-top: 1.5rem;
+                button {
+                    border-radius: 1.5rem;
+                }
+            }
+        }
+    }
+}
