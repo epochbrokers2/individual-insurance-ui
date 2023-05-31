@@ -634,7 +634,6 @@
     }
     .insured_detail {
         form {
-
             .insured_detail_checkbox {
                 display: flex;
                 flex-direction: column;
@@ -729,6 +728,229 @@
                 justify-content: center;
                 button {
                     border-radius: 2rem;
+                }
+            }
+        }
+    }
+}
+
+// CITY CSS
+.health_step_four {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .subhead {
+        font-size: 1.2rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 110%;
+            left: 5px;
+            width: 60%;
+            height: 0.3px;
+            background: $orange;
+        }
+        span {
+            color: $orange;
+        }
+    }
+    .process_main {
+        position: relative;
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        align-items: center;
+        .process_step {
+            border: 1px solid $border-color;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $border-color;
+            position: relative;
+            z-index: 1;
+            background: #fff;
+            &:first-child {
+                &::after {
+                    display: none;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -32px;
+                transform: translate(-50%, -50%);
+                width: 4rem;
+                height: 1px;
+                background: $border-color;
+                z-index: -1;
+            }
+            &.process_step_active {
+                background: $orange;
+                border: 1px solid $orange;
+                color: #fff;
+                &::after {
+                    background: $orange;
+                }
+            }
+        }
+    }
+    .city_form {
+        margin-top: 3rem;
+        .form_head {
+            font-size: 1.1rem;
+            position: relative;
+            display: inline-block;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 110%;
+                left: 0px;
+                width: 60%;
+                height: 0.3px;
+                background: $orange;
+            }
+        }
+        .city_form_radio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1rem;
+            label {
+                cursor: pointer;
+                input[type="radio"] {
+                    position: absolute;
+                    opacity: 0;
+                }
+                .text {
+                    padding: 0.5rem 2rem;
+                    border-radius: 8px;
+                    border: 1px solid $border-color;
+                    font-size: 1rem;
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+                    color: $text-color-secondary;
+                }
+                input[type="radio"]:checked + .text {
+                    color: $orange;
+                    border: 1px solid $orange;
+                }
+            }
+        }
+        .btn_div {
+            text-align: center;
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            button {
+                border-radius: 2rem;
+            }
+        }
+    }
+}
+
+.exisiting_illness.modal {
+    .modal-dialog {
+        .modal-header {
+            .title {
+                font-size: 1rem;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+        .modal-content {
+            padding: 2rem;
+            h2 {
+                margin: 1em -1em;
+                font-size: 1rem;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &::after,
+                &::before {
+                    content: '';
+                    flex: 1;
+                    height: 1px;
+                    margin: 0 1em;
+                    background: $border-color;
+                }
+            }
+            p {
+                text-align: center;
+            }
+            .illness_radio {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+                margin: 2rem 0;
+                label {
+                    cursor: pointer;
+                    input[type='radio'] {
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    .content {
+                        font-size: 1rem;
+                        border: 1px solid $form-border;
+                        padding: 0.2rem 0.6rem;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        border-radius: 2rem;
+                        min-width: 80px;
+                        .circle {
+                            margin-right: 5px;
+                            width: 13px;
+                            height: 13px;
+                            padding: 2px;
+                            border-radius: 50%;
+                            background: #fff;
+                            border: 1px solid $form-border;
+                            position: relative;
+                        }
+                    }
+                    input[type='radio']:checked + .content {
+                        border: 1px solid $orange;
+                        background: $bg-orange;
+                        color: $orange;
+                        .circle {
+                            border: 1px solid $orange;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 7px;
+                                height: 7px;
+                                border-radius: 50%;
+                                background: $orange;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_div {
+                text-align: center;
+                button {
+                    padding: 0.3rem 1rem;
+                    font-size: 0.9rem;
                 }
             }
         }
