@@ -108,7 +108,7 @@
         display: inline-block;
         margin-bottom: 1rem;
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: 110%;
             left: 5px;
@@ -150,7 +150,7 @@
                 }
             }
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 50%;
                 left: -32px;
@@ -171,7 +171,7 @@
             padding-bottom: 1rem;
             .health_step_one_gender_input {
                 cursor: pointer;
-                input[type='radio'] {
+                input[type="radio"] {
                     position: absolute;
                     opacity: 0;
                 }
@@ -189,8 +189,9 @@
                         color: $text-color-secondary;
                     }
                 }
-                input[type="radio"]:checked + .health_step_one_gender_input_content {
-                    box-shadow: 0px 3px 6px #27ACB04D;
+                input[type="radio"]:checked
+                    + .health_step_one_gender_input_content {
+                    box-shadow: 0px 3px 6px #27acb04d;
                     border: 1px solid $teal;
                     color: $teal;
                     background: $bg-teal;
@@ -231,7 +232,7 @@
             display: inline-block;
             margin-bottom: 1rem;
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 110%;
                 left: 2px;
@@ -252,7 +253,7 @@
                 gap: 0.5rem;
                 margin-bottom: 0.5rem;
                 &::before {
-                    content: '• ';
+                    content: "• ";
                     color: $orange;
                 }
             }
@@ -267,7 +268,7 @@
         display: inline-block;
         margin-bottom: 1rem;
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: 110%;
             left: 2px;
@@ -319,7 +320,7 @@
                 position: relative;
                 outline: 0;
                 &::after {
-                    content: '';
+                    content: "";
                     position: absolute;
                     top: 40%;
                     right: -1.5rem;
@@ -336,7 +337,7 @@
                 &.tab_active {
                     color: $orange;
                     &::before {
-                        content: '';
+                        content: "";
                         position: absolute;
                         left: auto;
                         bottom: -5px;
@@ -351,6 +352,67 @@
             margin: 2rem 0 0;
             .tab_hide {
                 display: none;
+            }
+            .tab_content {
+                display: flex;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                .tab_content_box {
+                    background: #fff;
+                    border: 2px solid $border-color;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    text-align: center;
+                    flex: 0 0 31%;
+                    max-width: 31%;
+                    .head {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.faq {
+    position: relative;
+    padding: 2rem 0;
+    h2 {
+        text-align: center;
+    }
+    .faq_main {
+        margin-top: 1rem;
+        .accordion {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            .accordion-item {
+                border-bottom: 1px solid $border-color;
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+            .accordion-title {
+                display: block;
+                padding: 1rem 1rem 1rem 0;
+                font-size: 1.1rem;
+                position: relative;
+                cursor: pointer;
+                span {
+                    position: absolute;
+                    top: 50%;
+                    right: -0.6rem;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .accordion-title.active .icon-down_arrow {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+            .accordion-content {
+                display: none;
+                padding: 0 1rem 1rem 0;
             }
         }
     }
