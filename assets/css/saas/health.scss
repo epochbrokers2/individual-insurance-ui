@@ -259,3 +259,99 @@
         }
     }
 }
+
+.benefit_insurace {
+    padding: 2rem 0;
+    h2 {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 110%;
+            left: 2px;
+            width: 55%;
+            height: 0.3px;
+            background: $orange;
+        }
+    }
+    p {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    ul {
+        padding-left: 1.2rem;
+        margin-top: 1rem;
+        li {
+            margin-bottom: 0.5rem;
+            color: $text-color-primary;
+        }
+    }
+}
+
+.why_choose {
+    position: relative;
+    background: $bg-gray;
+    padding: 2rem 0;
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    h2 + p {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .main_tab {
+        margin-top: 2rem;
+        .tab_list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            .tab_title {
+                cursor: pointer;
+                font-size: 1.1rem;
+                margin: 0 1.5rem 10px;
+                color: $text-color-secondary;
+                font-weight: 500;
+                letter-spacing: 1px;
+                position: relative;
+                outline: 0;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 40%;
+                    right: -1.5rem;
+                    transform: translate(-50%, -50%);
+                    width: 0.2px;
+                    height: 50%;
+                    background: $orange;
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+                &.tab_active {
+                    color: $orange;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: auto;
+                        bottom: -5px;
+                        width: 100%;
+                        height: 2px;
+                        background: $orange;
+                    }
+                }
+            }
+        }
+        .tabbing_content {
+            margin: 2rem 0 0;
+            .tab_hide {
+                display: none;
+            }
+        }
+    }
+}
