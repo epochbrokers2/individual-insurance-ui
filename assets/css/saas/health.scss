@@ -417,3 +417,145 @@
         }
     }
 }
+
+//Cover Range
+.health_step_two {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .subhead {
+        font-size: 1.2rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 110%;
+            left: 5px;
+            width: 60%;
+            height: 0.3px;
+            background: $orange;
+        }
+        span {
+            color: $orange;
+        }
+    }
+    .process_main {
+        position: relative;
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        align-items: center;
+        .process_step {
+            border: 1px solid $border-color;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $border-color;
+            position: relative;
+            z-index: 1;
+            background: #fff;
+            &:first-child {
+                &::after {
+                    display: none;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -32px;
+                transform: translate(-50%, -50%);
+                width: 4rem;
+                height: 1px;
+                background: $border-color;
+                z-index: -1;
+            }
+            &.process_step_active {
+                background: $orange;
+                border: 1px solid $orange;
+                color: #fff;
+                &::after {
+                    background: $orange;
+                }
+            }
+        }
+    }
+    .health_step_two_form {
+        margin-top: 2rem;
+        form {
+            .radio_input {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                label {
+                    cursor: pointer;
+                    input[type="radio"] {
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    .text {
+                        font-size: 1rem;
+                        padding: 0.8rem 1rem;
+                        border: 1px solid $border-color;
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                        border-radius: 8px;
+                    }
+                    input[type="radio"]:checked + .text {
+                        box-shadow: 0px 3px 6px #27acb04d;
+                        border: 1px solid $teal;
+                        color: $teal;
+                        background: $bg-teal;
+                    }
+                }
+            }
+            .or {
+                display: block;
+                margin: 2rem auto;
+                text-align: center;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background: $border-color;
+                    position: absolute;
+                    top: 50%;
+                    z-index: -1;
+                    left: 0;
+                }
+                .text {
+                    font-size: 1.1rem;
+                    text-align: center;
+                    position: relative;
+                    z-index: 1;
+                    padding: 0 0.5rem;
+                    display: inline-block;
+                    background: #fff;
+                }
+            }
+            .btn_div {
+                text-align: center;
+                margin-top: 2rem;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+                button {
+                    border-radius: 2rem;
+                }
+            }
+        }
+    }
+}
