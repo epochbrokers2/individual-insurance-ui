@@ -53,7 +53,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="health_step_two">
+                <div class="health_step_three">
                     <h1>Choose Best Health Insurance plans</h1>
                     <div class="subhead">
                         Who would you like <span>to get insured?</span>
@@ -65,65 +65,130 @@
                         <div class="process_step process_step_active">
                             <div class="process_step_count">2</div>
                         </div>
-                        <div class="process_step">
+                        <div class="process_step process_step_active">
                             <div class="process_step_count">3</div>
                         </div>
                         <div class="process_step">
                             <div class="process_step_count">4</div>
                         </div>
                     </div>
-                    <div class="health_step_two_form">
+                    <div class="insured_detail">
                         <form>
-                            <div class="radio_input">
-                                <label for="upto_three">
-                                    <input type="radio" name="cover_range" id="upto_three" value="Upto 3 Lakh"
-                                        checked />
-                                    <span class="text">
-                                        Up To 3 Lakh
-                                    </span>
-                                </label>
-                                <label for="three_five">
-                                    <input type="radio" name="cover_range" id="three_five" value="3 Lakhs - 5 Lakhs" />
-                                    <span class="text">
-                                        3 Lakhs - 5 Lakhs
-                                    </span>
-                                </label>
-                                <label for="five_ten">
-                                    <input type="radio" name="cover_range" id="five_ten" value="5 Lakhs - 10 Lakhs" />
-                                    <span class="text">
-                                        5 Lakhs - 10 Lakhs
-                                    </span>
-                                </label>
-                                <label for="ten_fifteen">
-                                    <input type="radio" name="cover_range" id="ten_fifteen"
-                                        value="10 Lakhs - 15 Lakhs" />
-                                    <span class="text">
-                                        10 Lakhs - 15 Lakhs
-                                    </span>
-                                </label>
-                                <label for="fifteen_twinty">
-                                    <input type="radio" name="cover_range" id="fifteen_twinty"
-                                        value="15 Lakhs - 20 Lakhs" />
-                                    <span class="text">
-                                        15 Lakhs - 20 Lakhs
-                                    </span>
-                                </label>
-                                <label for="fifteen_twenty">
-                                    <input type="radio" name="cover_range" id="fifteen_twenty"
-                                        value="20 Lakhs - 25 Lakhs" />
-                                    <span class="text">
-                                        20 Lakhs - 25 Lakhs
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="or">
-                                <div class="text">OR</div>
-                            </div>
-                            <div class="form_input">
-                                <label htmlFor="cover" class="abs_label health_step_two_label">
-                                    <span class="label">Enter your own Cover</span>
-                                    <input type="text" id="cover" name="cover" placeholder="1000" />
-                                </label>
+                            <div class="insured_detail_checkbox">
+                                <div class="insured_detail_checkbox_main">
+                                    <label for="self" class="insured_detail_label">
+                                        <input type="checkbox" name="self" id="self" value="self" checked="">
+                                        <span class="content">
+                                            <span class="circle"></span>
+                                            Self
+                                        </span>
+                                    </label>
+                                    <div class="age self" style="display: block;">
+                                        <select name="self" id="self" class="form_select">
+                                            <option value="">---select age---</option>
+                                            <option value="">20 Years</option>
+                                            <option value="">21 Years</option>
+                                            <option value="">22 Years</option>
+                                            <option value="">23 Years</option>
+                                            <option value="">24 Years</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="insured_detail_checkbox_main">
+                                    <label for="spouse" class="insured_detail_label">
+                                        <input type="checkbox" name="spouse" id="spouse" value="spouse">
+                                        <span class="content">
+                                            <span class="circle"></span>
+                                            Spouse
+                                        </span>
+                                    </label>
+                                    <div class="age spouse">
+                                        <select name="spouse" id="spouse" class="form_select">
+                                            <option value="">---select age---</option>
+                                            <option value="">20 Years</option>
+                                            <option value="">21 Years</option>
+                                            <option value="">22 Years</option>
+                                            <option value="">23 Years</option>
+                                            <option value="">24 Years</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="insured_detail_checkbox_main">
+                                    <label for="son" class="insured_detail_label">
+                                        <input type="checkbox" name="son" id="son" value="son">
+                                        <span class="content">
+                                            <span class="circle"></span>
+                                            Son
+                                        </span>
+                                    </label>
+                                    <div class="age son">
+                                        <select name="son" id="son" class="form_select">
+                                            <option value="">---select age---</option>
+                                            <option value="">20 Years</option>
+                                            <option value="">21 Years</option>
+                                            <option value="">22 Years</option>
+                                            <option value="">23 Years</option>
+                                            <option value="">24 Years</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="insured_detail_checkbox_main">
+                                    <label for="daughter" class="insured_detail_label">
+                                        <input type="checkbox" name="daughter" id="daughter" value="daughter">
+                                        <span class="content">
+                                            <span class="circle"></span>
+                                            Daughter
+                                        </span>
+                                    </label>
+                                    <div class="age daughter">
+                                        <select name="daughter" id="daughter" class="form_select">
+                                            <option value="">---select age---</option>
+                                            <option value="">20 Years</option>
+                                            <option value="">21 Years</option>
+                                            <option value="">22 Years</option>
+                                            <option value="">23 Years</option>
+                                            <option value="">24 Years</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="insured_detail_checkbox_main">
+                                    <label for="father" class="insured_detail_label">
+                                        <input type="checkbox" name="father" id="father" value="father">
+                                        <span class="content">
+                                            <span class="circle"></span>
+                                            Father
+                                        </span>
+                                    </label>
+                                    <div class="age father">
+                                        <select name="father" id="father" class="form_select">
+                                            <option value="">---select age---</option>
+                                            <option value="">20 Years</option>
+                                            <option value="">21 Years</option>
+                                            <option value="">22 Years</option>
+                                            <option value="">23 Years</option>
+                                            <option value="">24 Years</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="insured_detail_checkbox_main">
+                                    <label for="mother" class="insured_detail_label">
+                                        <input type="checkbox" name="mother" id="mother" value="mother">
+                                        <span class="content">
+                                            <span class="circle"></span>
+                                            Mother
+                                        </span>
+                                    </label>
+                                    <div class="age mother">
+                                        <select name="mother" id="mother" class="form_select">
+                                            <option value="">---select age---</option>
+                                            <option value="">20 Years</option>
+                                            <option value="">21 Years</option>
+                                            <option value="">22 Years</option>
+                                            <option value="">23 Years</option>
+                                            <option value="">24 Years</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <div class="btn_div">
                                 <button class="back_btn"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
@@ -426,7 +491,15 @@
 
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/health/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.insured_detail_label input[type="checkbox"]').click(function () {
+                var inputValue = $(this).attr("value");
 
+                $("." + inputValue).toggle();
+            });
+        });
+    </script>
 </body>
 
 </html>

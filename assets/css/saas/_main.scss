@@ -25,7 +25,8 @@
     padding: 0;
     margin: 0;
 }
-html, body {
+html,
+body {
     font-family: "Nunito Sans";
 }
 
@@ -212,6 +213,46 @@ input[type="number"] {
     &::before {
         display: inline;
         content: "⚠ ";
+    }
+}
+.form_select {
+    display: inline-block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $text-color-primary;
+    vertical-align: middle;
+    background: #fff
+        url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMy4xOCAxNC45NyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMyMzFmMjA7fTwvc3R5bGU+PC9kZWZzPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTEuNjIsMTAuNzZsMy4xMi0zLjYzTDIwLjI0LjcxYTEuNjEsMS42MSwwLDAsMSwxLjkxLS41LDEuNTcsMS41NywwLDAsMSwxLDEuNjQsMS44OCwxLjg4LDAsMCwxLS40MSwxUTE3Ljg1LDguNiwxMi45MiwxNC4zM2ExLjY0LDEuNjQsMCwwLDEtMi42MSwwTC40MiwyLjc2QTEuNjUsMS42NSwwLDAsMSwuNTcuNDEsMS42MywxLjYzLDAsMCwxLDIuOTQuNjNsOC4yNyw5LjY1WiIvPjwvZz48L2c+PC9zdmc+")
+        right 0.75rem center/8px 10px no-repeat;
+    border: 1px solid $border-color;
+    outline: 0;
+    border-radius: 0.25rem;
+    appearance: none;
+}
+.form_control {
+    display: block;
+    width: 100%;
+    padding: 0.1rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $text-color-primary;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid $border-color;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    outline: 0;
+    &::placeholder {
+        color: $placeholder-color;
     }
 }
 h1 {

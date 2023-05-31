@@ -559,3 +559,178 @@
         }
     }
 }
+
+//demography
+.health_step_three {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    .subhead {
+        font-size: 1.2rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 110%;
+            left: 5px;
+            width: 60%;
+            height: 0.3px;
+            background: $orange;
+        }
+        span {
+            color: $orange;
+        }
+    }
+    .process_main {
+        position: relative;
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        align-items: center;
+        .process_step {
+            border: 1px solid $border-color;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $border-color;
+            position: relative;
+            z-index: 1;
+            background: #fff;
+            &:first-child {
+                &::after {
+                    display: none;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -32px;
+                transform: translate(-50%, -50%);
+                width: 4rem;
+                height: 1px;
+                background: $border-color;
+                z-index: -1;
+            }
+            &.process_step_active {
+                background: $orange;
+                border: 1px solid $orange;
+                color: #fff;
+                &::after {
+                    background: $orange;
+                }
+            }
+        }
+    }
+    .insured_detail {
+        form {
+
+            .insured_detail_checkbox {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 3rem;
+                .insured_detail_checkbox_main {
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                    align-items: center;
+                }
+                .insured_detail_label {
+                    cursor: pointer;
+                    input[type="checkbox"] {
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    .content {
+                        font-size: 1rem;
+                        border: 1px solid $form-border;
+                        padding: 0.5rem;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        border-radius: 4px;
+                        min-width: 100px;
+                        .circle {
+                            margin-right: 5px;
+                            width: 13px;
+                            height: 13px;
+                            padding: 2px;
+                            border-radius: 50%;
+                            background: #fff;
+                            border: 1px solid $form-border;
+                            position: relative;
+                        }
+                        // &::after {
+                        //     content: "";
+                        //     height: 6px;
+                        //     width: 6px;
+                        //     margin-right: 5px;
+                        //     border-bottom: 1px solid #373737;
+                        //     border-right: 1px solid #373737;
+                        //     position: absolute;
+                        //     top: 47%;
+                        //     right: 0;
+                        //     transform: translate(-50%, -50%) rotate(45deg);
+                        // }
+                    }
+                    input[type="checkbox"]:checked + .content {
+                        border: 1px solid $orange;
+                        background: $bg-orange;
+                        color: $orange;
+                        .circle {
+                            border: 1px solid $orange;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 7px;
+                                height: 7px;
+                                border-radius: 50%;
+                                background: $orange;
+                            }
+                        }
+                        // &::after {
+                        //     border-color: $orange;
+                        // }
+                    }
+                }
+                .age {
+                    display: none;
+                }
+                .add_other_member {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    padding: 0.5rem;
+                    background: $bg-teal;
+                    color: $teal;
+                    border: 1px dashed $teal;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+            .btn_div {
+                text-align: center;
+                margin: 2rem auto 1rem;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+                button {
+                    border-radius: 2rem;
+                }
+            }
+        }
+    }
+}
