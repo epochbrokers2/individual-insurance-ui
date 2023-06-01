@@ -1,0 +1,35 @@
+@import "./main";
+.edit_share {
+    padding: 0.5rem;
+    .edit_share_main {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        cursor: pointer;
+        .edit_search, .share_quote {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+    }
+}
+.filter {
+    position: relative;
+    padding: 1rem 0;
+    box-shadow: 0px 3px 6px #7D7D7D29;
+    border-top: 1px solid $border-color;
+    .filter_main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        .filter_main_input {
+            select {
+                @include select_dropdown;
+            }
+        }
+    }
+}
